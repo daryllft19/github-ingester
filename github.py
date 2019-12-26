@@ -45,7 +45,16 @@ class Github:
         return iter(self)
 
     def __next__(self):
-        """Retrieves the next data, iterating through each resource and repo"""
+        """Retrieves the next data, iterating through each resource and repo
+
+        :returns:
+            {
+                'resource': <Resource being retrieved>,
+                'repo': <Repo where resource is being retrieved>,
+                'data': <JSON response of github resource>
+            }
+
+        """
 
         if self._resources_index == len(self._resources):
             return None
