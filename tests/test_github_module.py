@@ -3,8 +3,7 @@ from github import Github, InvalidGithubResourcesException
 
 class TestGithubModule(unittest.TestCase):
     def setUp(self):
-        # self.github_iter = Github('moby', [ 'moby', ], [ 'topics' ])
-        self.github_iter = Github('moby', [ 'moby' ], [ 'topics' ], 'daryllft19', 'a361bf08ddcee4cecd4571490b82563d2dc0fde1')
+        self.github_iter = Github('moby', [ 'moby', ], [ 'topics' ])
 
     def test_invalid_github_resource(self):
         """Tests if module throws an exception after incorrect resource"""
