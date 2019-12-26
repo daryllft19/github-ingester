@@ -15,7 +15,22 @@ gi.read()
 # {'resource': 'topics', 'repo': 'moby', 'data': {'names': ['docker', 'containers', 'go']}}
 ```
 
+## List of Supported Resources
+* topics
+* vulnerability-alerts
+* topics
+* languages
+* teams
+* tags
+* pulls
+* issues
+* import
+* branches
+* interaction-limits
+* projects
+* contributors
+
 ## Tests
-```
+`
 python -m unittest discover tests/
-```
+`
