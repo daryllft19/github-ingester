@@ -19,7 +19,6 @@ jobs:
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*'
       env:
-        SOURCE_DIR: ./xld-sdk-client-dev.zip
         AWS_S3_BUCKET: xld-sdk-client-dev
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
