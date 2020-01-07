@@ -11,9 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - run: rm -rf .git*
     - uses: montudor/action-zip@v0.1.0
       with:
-        args: zip -qq -r -x .git* ./xld-sdk-client-dev.zip .
+        args: zip -qq -r ./xld-sdk-client-dev.zip . -x .git*
     - name: S3 Sync
       uses: jakejarvis/s3-sync-action@master
       with:
