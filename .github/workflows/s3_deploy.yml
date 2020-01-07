@@ -2,9 +2,7 @@ name: S3 Deploy
 
 on:
   push:
-    branches: 
-      - master
-      - dev
+    branches: [master, dev]
 
 jobs:
   build:
@@ -18,7 +16,7 @@ jobs:
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git/*'
       env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}-${{ github.GITHUB_REF }}
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}-${{ secrets.GITHUB_REF }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
